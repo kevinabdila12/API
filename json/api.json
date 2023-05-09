@@ -8,6 +8,7 @@
     "host": "reqres.in",
     "basePath": "/api",
     "schemes": [
+        "https",
         "http"
     ],
     "paths": {
