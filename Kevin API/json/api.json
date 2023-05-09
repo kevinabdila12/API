@@ -1,0 +1,157 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Kevin API",
+      "description": "List API",
+      "version": "1.0.0"
+    },
+    "host": "reqres.in",
+    "basePath": "/api",
+    "schemes": [
+        "https"
+    ],
+    "paths": {
+      "/unknown": {
+        "get": {
+          "tags": [
+            "List API (Success)"
+          ],
+          "summary": "List API",
+          "description": "Menampilkan list data API",
+          "responses": {
+            "200": {
+              "description": "Successful operation"
+            }
+          }
+        }
+      },
+      "/unknown/23": {
+        "get": {
+          "tags": [
+            "List API (Error)"
+          ],
+          "summary": "List API",
+          "description": "Menampilkan list data API",
+          "responses": {
+            "404": {
+              "description": "Not found"
+            }
+          }
+        }
+      },
+      "/users/3": {
+        "put": {
+          "tags": [
+            "Update user (Success)"
+          ],
+          "summary": "Update user",
+          "description": "Mengupdate salah satu akun user",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Field Inputan",
+              "in": "body",
+              "description": "Harus menggunakan format JSON",
+              "required": true
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful operation"
+            }
+          }
+        }
+      },
+      "/users/4": {
+        "patch": {
+          "tags": [
+            "Update salah satu data user (Success)"
+          ],
+          "summary": "Update user",
+          "description": "Mengupdate salah satu data akun user",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Field Inputan",
+              "in": "body",
+              "description": "Harus menggunakan format JSON",
+              "required": true
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful operation"
+            }
+          }
+        }
+      },
+      "/login": {
+        "post": {
+          "tags": [
+            "Login user (Success)"
+          ],
+          "summary": "Login user",
+          "description": "Login satu akun user",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Field Inputan",
+              "in": "body",
+              "description": "Harus menggunakan format JSON",
+              "required": true
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful login operation"
+            }
+          }
+        }
+      },
+      "/register": {
+        "post": {
+          "tags": [
+            "Register user (Failed)"
+          ],
+          "summary": "Login user",
+          "description": "Login satu akun user",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Field Inputan",
+              "in": "body",
+              "description": "Harus menggunakan format JSON",
+              "required": true
+            }
+          ],
+          "responses": {
+            "400": {
+              "description": "Missing one or more field"
+            }
+          }
+        }
+      },
+      "/users/2": {
+        "delete": {
+          "tags": [
+            "Delete (Success)"
+          ],
+          "summary": "Menghapus akun",
+          "description": "Berhasil menghapus akun",
+          "responses": {
+            "204": {
+              "description": "Delete success"
+            }
+          }
+        }
+      }
+    }
+  }
